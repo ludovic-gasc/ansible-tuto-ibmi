@@ -2,6 +2,7 @@
 .vagrant
 test/*.log
 test/*.log.test
+venv
 
 _book/
 node_modules/

@@ -141,7 +141,7 @@ complete. It could add a virtualhost, ensure apache is restarted. It could
 even deploy our web site from a git repository. Lets "[make it so][]"
 
 Head to next step in
-[step-05](https://github.com/leucos/ansible-tuto/tree/master/step-05).
+[step-05](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-05).
 
 [make it so]: https://www.google.fr/search?q=Michael+DeHaan+%22make+it+so%22 "© Michael DeHaan"
 

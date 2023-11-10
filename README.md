@@ -1,8 +1,9 @@
-# Ansible tutorial
+# Ansible tutorial for IBM i
 
 This tutorial presents Ansible step-by-step. You'll need to have a (virtual or
-physical) machine to act as an Ansible node. A Vagrant environment is provided for 
-going through this tutorial.
+physical) machine to act as an Ansible node.
+
+This Ansible tutorial is an adaption of [the work of Leucos](https://github.com/leucos/ansible-tuto), for IBM i.
 
 Ansible is a configuration management software that lets you control and
 configure nodes from another machine. What makes it different from other
@@ -26,9 +27,7 @@ We're also assuming you have a keypair in your ~/.ssh directory.
 
 ## Quick start
 
-- install Vagrant if you don't have it
 - install ansible (preferably 2.10.5+ and using pip+virtualenv)
-- `vagrant up`
 - goto [step-00](./step-00/README.md)
 
 ## Complete explanations
@@ -76,7 +75,7 @@ lets be safe).
 Then, install ansible via `pip`:
 
 ```bash
-pip install ansible==2.7.1
+pip install ansible
 ```
 
 (or use whatever version you want).
@@ -137,8 +136,8 @@ sudo dpkg -i ../ansible_x.y_all.deb (version may vary)
 ### Cloning the tutorial
 
 ```bash
-git clone https://github.com/leucos/ansible-tuto.git
-cd ansible-tuto
+git clone https://github.com/ludovic-gasc/ansible-tuto-ibmi.git
+cd ansible-tuto-ibmi
 ```
 
 ### Running the tutorials interactively with Docker
@@ -147,51 +146,43 @@ You can run the tutorials here interactively including a very simple setup with 
 
 Check [this repository](https://github.com/turkenh/ansible-interactive-tutorial) for details.
 
-### Using Vagrant with the tutorial
-
-It's highly recommended to use Vagrant to follow this tutorial. If you don't have 
-it already, setting up should be quite easy and is described in [step-00/README.md](https://github.com/leucos/ansible-tuto/tree/master/step-00/README.md).
-
-If you wish to proceed without Vagrant (not recommended!), go straight to
-[step-01/README.md](https://github.com/leucos/ansible-tuto/tree/master/step-01).
-
 ## Contents
 
 [Terminology](https://docs.ansible.com/ansible/glossary.html):
  - [command or
    action](https://docs.ansible.com/ansible/intro_adhoc.html): [ansible module](https://docs.ansible.com/ansible/modules.html) executed in
-   stand-alone mode. Intro in [step-02](https://github.com/leucos/ansible-tuto/tree/master/step-02).
+   stand-alone mode. Intro in [step-02](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-02).
  - task: combines an action (a module and its arguments) with a name
    and optionally some other keywords (like looping directives).
  - play: a yaml structure executing a list of roles or tasks over a list
    of hosts
  - [playbook](https://docs.ansible.com/ansible/playbooks_intro.html):
    yaml file containing multiple plays. Intro in
-   [step-04](https://github.com/leucos/ansible-tuto/tree/master/step-04).
+   [step-04](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-04).
  - [role](https://docs.ansible.com/ansible/playbooks_roles.html): an
    organisational unit grouping tasks together in order to achieve
    something (install a piece of software for instance). Intro in
-   [step-12](https://github.com/leucos/ansible-tuto/tree/master/step-12).
+   [step-12](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-12).
 
 Just in case you want to skip to a specific step, here is a topic table of contents.
 
-- [00. Vagrant Setup](https://github.com/leucos/ansible-tuto/tree/master/step-00)
-- [01. Basic inventory](https://github.com/leucos/ansible-tuto/tree/master/step-01)
-- [02. First modules and facts](https://github.com/leucos/ansible-tuto/tree/master/step-02)
-- [03. Groups and variables](https://github.com/leucos/ansible-tuto/tree/master/step-03)
-- [04. Playbooks](https://github.com/leucos/ansible-tuto/tree/master/step-04)
-- [05. Playbooks, pushing files on nodes](https://github.com/leucos/ansible-tuto/tree/master/step-05)
-- [06. Playbooks and failures](https://github.com/leucos/ansible-tuto/tree/master/step-06)
-- [07. Playbook conditionals](https://github.com/leucos/ansible-tuto/tree/master/step-07)
-- [08. Git module](https://github.com/leucos/ansible-tuto/tree/master/step-08)
-- [09. Extending to several hosts](https://github.com/leucos/ansible-tuto/tree/master/step-09)
-- [10. Templates](https://github.com/leucos/ansible-tuto/tree/master/step-10)
-- [11. Variables again](https://github.com/leucos/ansible-tuto/tree/master/step-11)
-- [12. Migrating to roles](https://github.com/leucos/ansible-tuto/tree/master/step-12)
-- [13. Using tags (TBD)](https://github.com/leucos/ansible-tuto/tree/master/step-13)
-- [14. Roles dependencies (TBD)](https://github.com/leucos/ansible-tuto/tree/master/step-14)
-- [15. Debugging (TBD)](https://github.com/leucos/ansible-tuto/tree/master/step-15)
-- [99. The end](https://github.com/leucos/ansible-tuto/tree/master/step-99)
+- [00. Setup](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-00)
+- [01. Basic inventory](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-01)
+- [02. First modules and facts](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-02)
+- [03. Groups and variables](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-03)
+- [04. Playbooks](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-04)
+- [05. Playbooks, pushing files on nodes](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-05)
+- [06. Playbooks and failures](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-06)
+- [07. Playbook conditionals](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-07)
+- [08. Git module](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-08)
+- [09. Extending to several hosts](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-09)
+- [10. Templates](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-10)
+- [11. Variables again](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-11)
+- [12. Migrating to roles](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-12)
+- [13. Using tags (TBD)](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-13)
+- [14. Roles dependencies (TBD)](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-14)
+- [15. Debugging (TBD)](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-15)
+- [99. The end](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-99)
 
 ## Contributing
 
@@ -240,9 +231,6 @@ Thanks to all people who have contributed to this tutorial:
 I've been using Ansible almost since its birth, but I learned a lot in
 the process of writing it. If you want to jump in, it's a great way to
 learn, feel free to add your contributions.
-
-The chapters being written live in the
-[writing](https://github.com/leucos/ansible-tuto/tree/writing) branch.
 
 If you have ideas on topics that would require a chapter, please open a
 PR.

@@ -78,4 +78,4 @@ use them.
 Now that we know the basics of modules, inventories and variables, let's
 explore the real power of Ansible with playbooks.
 
-Head to [step-04](https://github.com/leucos/ansible-tuto/tree/master/step-04).
+Head to [step-04](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-04).

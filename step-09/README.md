@@ -94,4 +94,4 @@ subset, we could have used, for instance: `-l firsthost:secondhost:...`.
 
 Now that we have this nice farm of web servers, let's turn it into a cluster by
 putting a load balancer in front of them in
-[step-10](https://github.com/leucos/ansible-tuto/tree/master/step-10).
+[step-10](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-10).

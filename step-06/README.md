@@ -108,4 +108,4 @@ subsequent apache restart will complain about our config and bail out. So we
 need a way to catch failures and revert back.
 
 Let's do that in
-[step-07](https://github.com/leucos/ansible-tuto/tree/master/step-07).
+[step-07](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-07).

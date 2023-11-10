@@ -209,4 +209,4 @@ you can even peek at HAProxy's statistics at
 [http://192.168.33.10/haproxy?stats](http://192.168.33.10/haproxy?stats).
 
 Now on to the next chapter about "Variables again", in
-[step-11](https://github.com/leucos/ansible-tuto/tree/master/step-11).
+[step-11](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-11).

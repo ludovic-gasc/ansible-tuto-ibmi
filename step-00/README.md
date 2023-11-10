@@ -1,42 +1,10 @@
-# Ansible tutorial: setup
+# Ansible tutorial for IBM i: 
 
-To make the tutorial self-contained, a Vagrant file is provided. Vagrant makes
-it easy to bootstrap barebones virtual machines with VirtualBox.
+## setup requirements on your IBM i LPARs
 
-## Installing Vagrant
+Please follow [the official documentation to install Ansible requirements](https://ibm.github.io/ansible-for-i/installation.html#enabling-ibm-i-nodes).
 
-In order to run Vagrant, you need:
-
-- VirtualBox installed
-- Ruby installed (should be on your system already)
-- Vagrant 1.1+ installed (see
-  [http://docs.vagrantup.com/v2/installation/index.html](http://docs.vagrantup.com/v2/installation/index.html)).
-
-This should be all it takes to set up Vagrant.
-
-Now bootstrap your virtual machines with the following command. Note that you
-do not need to download any "box" manually. This tutorial already includes a
-`Vagrantfile` to get you up and running, and will get one for you if needed.
-
-`vagrant up`
-
-and go grab yourself a coffee (note that if you use vagrant-hostmaster, you'll
-need to type your password since it needs to sudo as root).
-
-If something goes wrong, refer to Vagrant's [Getting Started
-Guide](http://docs.vagrantup.com/v2/getting-started/index.html).
-
-### Cautionary tale about NetworkManager
-
-On some systems, NetworkManager will take over `vboxnet` interfaces and mess
-everything up. If you're in this case, you should prevent NetworkManager from
-trying to autoconfigure `vboxnet` interfaces. Just edit
-`/etc/NetworkManager/NetworkManager.conf` (or whatever the NetworkManager
-config is on your system) and add in section `[keyfile]`:
-
-    unmanaged-devices=mac:MAC_OF_VBOXNET0_IF;mac:MAC_OF_VBOXNET1_IF;...
-
-Then destroy Vagrant machines, restart NetworkManager and try again.
+You might also use [the official setup.yml Ansible playbook](https://github.com/IBM/ansible-for-i/tree/devel/playbooks/enable-ansible-for-i).
 
 ## Adding your SSH keys on the virtual machines
 
@@ -84,4 +52,4 @@ ansible 2.10.5
 ```
 
 Now head to the first step in
-[step-01](https://github.com/leucos/ansible-tuto/tree/master/step-01).
+[step-01](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-01).

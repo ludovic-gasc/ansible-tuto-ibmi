@@ -106,4 +106,4 @@ Shouldn't we check that the config is ok before restarting apache? This way we
 won't end up interrupting the service if our configuration file is incorrect.
 
 Lets do that in
-[step-06](https://github.com/leucos/ansible-tuto/tree/master/step-06).
+[step-06](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-06).

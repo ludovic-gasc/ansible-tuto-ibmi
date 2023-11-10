@@ -118,7 +118,7 @@ As a result, we ended up with the following playbook:
 
     - name: Deploy our awesome application
       git:
-        repo: https://github.com/leucos/ansible-tuto-demosite.git
+        repo: https://github.com/ludovic-gasc/ansible-tuto-ibmi-demosite.git
         dest: /var/www/awesome-app
       tags: deploy
 
@@ -210,6 +210,6 @@ host1              : ok=2    changed=1    unreachable=0    failed=0
 ```
 
 Ok, let's deploy another web server in
-[step-09](https://github.com/leucos/ansible-tuto/tree/master/step-09).
+[step-09](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-09).
 
 [deprecated]: https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_2.7.html#using-a-loop-on-a-package-module-via-squash-actions

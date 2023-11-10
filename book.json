@@ -6,11 +6,11 @@
     ],
     "pluginsConfig": {
             "edit-link": {
-                "base": "https://github.com/leucos/ansible-tuto/tree/writing",
+                "base": "https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/writing",
                 "label": "Edit"
             },
             "github": {
-                "url": "https://github.com/leucos/ansible-tuto"
+                "url": "https://github.com/ludovic-gasc/ansible-tuto-ibmi"
             }
     }
 }

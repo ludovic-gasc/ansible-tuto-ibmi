@@ -106,7 +106,7 @@ Not really hard. Lets apply this to our apache roles.
 
 - name: Deploy our awesome application
   git:
-    repo: https://github.com/leucos/ansible-tuto-demosite.git
+    repo: https://github.com/ludovic-gasc/ansible-tuto-ibmi-demosite.git
     dest: /var/www/awesome-app
   tags:
     - deploy
@@ -130,6 +130,6 @@ You probably noticed that I already slipped in a tag in the previous
 chapters (`deploy`). Now we added the `apache` tag too.
 
 But for now, we'll see how we can deploy firewall rules for our cluster
-in [step-13](https://github.com/leucos/ansible-tuto/tree/master/step-13)
+in [step-13](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-13)
 chapter about "Deploying firewall rules". In this chapter, we'll use
 role dependencies to build our systems.

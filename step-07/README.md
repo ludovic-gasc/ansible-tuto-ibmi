@@ -135,4 +135,4 @@ almost  everywhere, so it's easy to make this a general playbook for apache,
 and use it everywhere to deploy your virtualhosts. Write it once, use it
 everywhere. We'll do that in step 9 but for now, let's deploy our web site
 using git in
-[step-08](https://github.com/leucos/ansible-tuto/tree/master/step-08).
+[step-08](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-08).

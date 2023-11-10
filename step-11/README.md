@@ -165,4 +165,4 @@ saying that `ansible_all_ipv4_addresses` key doesn't exist.
 Note that we already did that in the previous step, but we did not mention it.
 
 Now on to the next chapter about "Migrating to Roles!", in
-[step-12](https://github.com/leucos/ansible-tuto/tree/master/step-12).
+[step-12](https://github.com/ludovic-gasc/ansible-tuto-ibmi/tree/master/step-12).
