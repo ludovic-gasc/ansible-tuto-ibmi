@@ -1,0 +1,41 @@
+---
+- hosts: ibmi
+  gather_facts: false
+  collections:
+    - ibm.power_ibmi
+
+  tasks:
+    - name: Create two links to be able to use Yum on IBM i
+      ansible.builtin.file:
+        src: "/QOpenSys/pkgs/bin/{{ item.src }}"
+        dest: "/usr/bin/{{ item.dest }}"
+        state: link
+      loop:
+        - { src: python2, dest: python }
+        - { src: yum, dest: yum }
+
+    - name: Install tools
+      ansible.builtin.yum:
+        pkg:
+          - rsync
+          - ibmichroot
+          - ncdu
+          - chsh
+        state: latest
+        update_cache: false
+        installroot: /QOpenSys/pkgs/
+
+    # - name: Change default shell
+    #   ibmi_sql_query:
+    #     sql: "CALL QSYS2.SET_PASE_SHELL_INFO('*CURRENT', '/QOpenSys/pkgs/bin/bash')"
+    - name: Change default shell
+      ansible.builtin.shell:
+        cmd: /QOpenSys/pkgs/bin/chsh -s /QOpenSys/pkgs/bin/bash
+      tags: shell
+
+    - name: Push default virtual host configuration
+      ansible.builtin.copy:
+        src: files/profile
+        dest: ~/.profile
+        mode: 0644
+      tags: shell

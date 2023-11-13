@@ -1,10 +1,8 @@
-# Ansible tutorial for IBM i: 
+# Ansible tutorial for IBM i
 
 ## setup requirements on your IBM i LPARs
 
 Please follow [the official documentation to install Ansible requirements](https://ibm.github.io/ansible-for-i/installation.html#enabling-ibm-i-nodes).
-
-You might also use [the official setup.yml Ansible playbook](https://github.com/IBM/ansible-for-i/tree/devel/playbooks/enable-ansible-for-i).
 
 ## Adding your SSH keys on the virtual machines
 
@@ -15,9 +13,7 @@ sudo, password authentication, etc...), it will make things way easier.
 Ansible is perfect for this and we will use it for the job. However I won't
 explain what's happening for now. Just trust me.
 
-```bash
-ansible-playbook -i step-00/hosts step-00/setup.yml
-```
+For that, please use [the official setup.yml Ansible playbook](https://github.com/IBM/ansible-for-i/tree/devel/playbooks/enable-ansible-for-i).
 
 If you get "Connections timed out" errors, please check the firewall
 settings of your machine.

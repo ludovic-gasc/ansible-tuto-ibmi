@@ -23,7 +23,7 @@ Output should look like:
 
 ```bash
 host0 | success | rc=0 >>
-Linux host0 3.2.0-23-generic-pae #36-Ubuntu SMP Tue Apr 10 22:19:09 UTC 2012 i686 i686 i386 GNU/Linux
+OS400 host0 5 7 007800032351
 ```
 
 Cool!
@@ -72,19 +72,19 @@ other hosts too.
 Lets say we want to get some facts about the node, and, for instance,
 know which Ubuntu version we have deployed on nodes, it's pretty easy:
 
-    ansible -i step-02/hosts -m shell -a 'grep DISTRIB_RELEASE /etc/lsb-release' all
+    ansible -i step-02/hosts -m shell -a 'grep qopensys /etc/vfs' all
 
 `all` is a shortcut meaning 'all hosts found in inventory file'. It would
 return:
 
     host1 | success | rc=0 >>
-    DISTRIB_RELEASE=14.04
+    qopensys     2      none   none
 
     host2 | success | rc=0 >>
-    DISTRIB_RELEASE=14.04
+    qopensys     2      none   none
 
     host0 | success | rc=0 >>
-    DISTRIB_RELEASE=14.04
+    qopensys     2      none   none
 
 ## Many more facts
 

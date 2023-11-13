@@ -1,0 +1,4 @@
+PATH=/QOpenSys/pkgs/bin:$PATH
+export PATH
+PS1='[\u@\h \W]\$ '
+echo PS1

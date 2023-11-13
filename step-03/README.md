@@ -1,10 +1,10 @@
 # Ansible tutorial: Grouping hosts
 
 Hosts in inventory can be grouped arbitrarily. For instance, you could have a
-`debian` group, a `web-servers` group, a `production` group, etc...
+`ibmi` group, a `web-servers` group, a `production` group, etc...
 
 ```ini
-[debian]
+[ibmi]
 host0
 host1
 host2
@@ -13,7 +13,7 @@ host2
 This can even be expressed shorter:
 
 ```ini
-[debian]
+[ibmi]
 host[0:2]
 ```
 
@@ -27,6 +27,9 @@ host0
 
 [debian]
 host[1:2]
+
+[ibmi]
+host[3:6]
 
 [linux:children]
 ubuntu
