@@ -165,4 +165,4 @@ to select hosts](http://docs.ansible.com/intro_patterns.html):
   with '' (just like a shell glob too)
 
 There are other ways that involve groups, we'll see that in
-[step-03](https://github.com/leucos/ansible-tuto/tree/master/step-03).
+[step-03](https://github.com/ludovic-gasc/ansible-tuto/tree/master/step-03).
